@@ -88,6 +88,7 @@ class SignUpViewController: UIViewController {
                             print("Error adding document: \(err)")
                         }
                     }
+                    //dfvdf
                   
                     self.openHomeScreen()
                 }
