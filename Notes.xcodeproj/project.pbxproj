@@ -30,6 +30,7 @@
 		CB50058E2A617BE30084EBFB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB50058D2A617BE30084EBFB /* HomeViewController.swift */; };
 		CB5005922A617C1F0084EBFB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5005912A617C1F0084EBFB /* LoginViewController.swift */; };
 		CB5005962A617C340084EBFB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5005952A617C340084EBFB /* SignUpViewController.swift */; };
+		CBC4B5382A62F04800A14E8E /* AddNodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC4B5372A62F04800A14E8E /* AddNodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +65,10 @@
 		CB5005692A61697D0084EBFB /* NotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesUITests.swift; sourceTree = "<group>"; };
 		CB50056B2A61697D0084EBFB /* NotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CB5005782A61724D0084EBFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CB50058D2A617BE30084EBFB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CB50058D2A617BE30084EBFB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		CB5005912A617C1F0084EBFB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CB5005952A617C340084EBFB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CBC4B5372A62F04800A14E8E /* AddNodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNodeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				CB5005532A61697D0084EBFB /* LaunchScreen.storyboard */,
 				CB5005562A61697D0084EBFB /* Info.plist */,
 				CB5005782A61724D0084EBFB /* GoogleService-Info.plist */,
+				CBC4B5372A62F04800A14E8E /* AddNodeViewController.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				CB50054B2A61697C0084EBFB /* SceneDelegate.swift in Sources */,
 				CB5005922A617C1F0084EBFB /* LoginViewController.swift in Sources */,
 				CB50058E2A617BE30084EBFB /* HomeViewController.swift in Sources */,
+				CBC4B5382A62F04800A14E8E /* AddNodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
