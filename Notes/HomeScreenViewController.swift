@@ -1,25 +1,18 @@
 //
-//  HomeViewController.swift
+//  HomeScreenViewController.swift
 //  Notes
 //
-//  Created by Student32 on 14/07/2023.
+//  Created by Student32 on 16/07/2023.
 //
 
 import UIKit
-import FirebaseFirestore
-import FirebaseAuth
 
-class HomeViewController: UIViewController  {
- 
-    
- 
-    
+class HomeScreenViewController: UIViewController {
 
-    @IBOutlet weak var AddButton: UIButton!
+  
     
-    @IBOutlet weak var tableList: UITableView!
-    
-
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     var notes: Notes!
     
@@ -30,8 +23,8 @@ class HomeViewController: UIViewController  {
        
         notes = Notes()
         
-        tableList.delegate=self
-        tableList.dataSource=self
+        tableView.delegate=self
+        tableView.dataSource=self
     }
     
     
@@ -41,7 +34,7 @@ class HomeViewController: UIViewController  {
         super.viewDidAppear(animated)
         
         notes.loadData {
-            self.tableList.reloadData()
+            self.tableView.reloadData()
         }
     }
     
@@ -50,7 +43,7 @@ class HomeViewController: UIViewController  {
             let destination = segue.destination as! ShowNoteDetailsViewController
             
             
-            let selectedIndexPath = tableList.indexPathForSelectedRow!
+            let selectedIndexPath = tableView.indexPathForSelectedRow!
             destination.note = notes.noteArray[selectedIndexPath.row]
         }
     }
@@ -58,11 +51,7 @@ class HomeViewController: UIViewController  {
     
   
     
-    
-
-
-    @IBAction func AddButtonTapped(_ sender: Any) {
-        
+    @IBAction func addButtonTapped(_ sender: Any) {
         
         let addNoteScreen = storyboard?.instantiateViewController(identifier: "AddNoteViewController") as! AddNodeViewController
                             
@@ -71,8 +60,11 @@ class HomeViewController: UIViewController  {
 
         present( addNoteScreen, animated: true , completion: nil)
         
-        
     }
+    
+
+
+ 
     
 
 
@@ -82,7 +74,8 @@ class HomeViewController: UIViewController  {
     
 }
 
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+
+extension HomeScreenViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notes.noteArray.count
@@ -90,19 +83,21 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let note = notes.noteArray[indexPath.row]
-        let cell = tableList.dequeueReusableCell(withIdentifier: "cell", for:indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexPath) as!
+        NoteTableViewCell
         
-        cell.textLabel?.text=note.title
-        cell.textLabel?.text=note.des
+        //cell.text
+        cell.titleText?.text = note.title
+        cell.bodyText?.text = note.des
+        cell.dateText?.text = note.date
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
 }
-
-
-
-
-
-
+    
 
 
 

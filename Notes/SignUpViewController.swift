@@ -102,7 +102,7 @@ class SignUpViewController: UIViewController {
     }
     
     func openHomeScreen(){
-        let HomeScreen = storyboard?.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+        let HomeScreen = storyboard?.instantiateViewController(identifier: "HomeScreenViewController") as! HomeScreenViewController
                             
         HomeScreen.modalPresentationStyle = .fullScreen
 

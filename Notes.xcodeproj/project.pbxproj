@@ -31,6 +31,11 @@
 		CB5005922A617C1F0084EBFB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5005912A617C1F0084EBFB /* LoginViewController.swift */; };
 		CB5005962A617C340084EBFB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5005952A617C340084EBFB /* SignUpViewController.swift */; };
 		CBC4B5382A62F04800A14E8E /* AddNodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC4B5372A62F04800A14E8E /* AddNodeViewController.swift */; };
+		CBC988F92A644B70003904C9 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC988F82A644B70003904C9 /* Note.swift */; };
+		CBC988FB2A645946003904C9 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC988FA2A645946003904C9 /* Notes.swift */; };
+		CBC988FD2A646214003904C9 /* ShowNoteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC988FC2A646214003904C9 /* ShowNoteDetailsViewController.swift */; };
+		CBC988FF2A6475FB003904C9 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC988FE2A6475FB003904C9 /* HomeScreenViewController.swift */; };
+		CBC9890D2A648487003904C9 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9890C2A648487003904C9 /* NoteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +74,11 @@
 		CB5005912A617C1F0084EBFB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CB5005952A617C340084EBFB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CBC4B5372A62F04800A14E8E /* AddNodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNodeViewController.swift; sourceTree = "<group>"; };
+		CBC988F82A644B70003904C9 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		CBC988FA2A645946003904C9 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		CBC988FC2A646214003904C9 /* ShowNoteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowNoteDetailsViewController.swift; sourceTree = "<group>"; };
+		CBC988FE2A6475FB003904C9 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		CBC9890C2A648487003904C9 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +150,11 @@
 				CB5005562A61697D0084EBFB /* Info.plist */,
 				CB5005782A61724D0084EBFB /* GoogleService-Info.plist */,
 				CBC4B5372A62F04800A14E8E /* AddNodeViewController.swift */,
+				CBC988F82A644B70003904C9 /* Note.swift */,
+				CBC988FA2A645946003904C9 /* Notes.swift */,
+				CBC988FC2A646214003904C9 /* ShowNoteDetailsViewController.swift */,
+				CBC988FE2A6475FB003904C9 /* HomeScreenViewController.swift */,
+				CBC9890C2A648487003904C9 /* NoteTableViewCell.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -318,10 +333,15 @@
 				CB5005962A617C340084EBFB /* SignUpViewController.swift in Sources */,
 				CB50054D2A61697C0084EBFB /* ViewController.swift in Sources */,
 				CB5005492A61697C0084EBFB /* AppDelegate.swift in Sources */,
+				CBC988F92A644B70003904C9 /* Note.swift in Sources */,
 				CB50054B2A61697C0084EBFB /* SceneDelegate.swift in Sources */,
+				CBC988FF2A6475FB003904C9 /* HomeScreenViewController.swift in Sources */,
+				CBC988FB2A645946003904C9 /* Notes.swift in Sources */,
 				CB5005922A617C1F0084EBFB /* LoginViewController.swift in Sources */,
 				CB50058E2A617BE30084EBFB /* HomeViewController.swift in Sources */,
+				CBC988FD2A646214003904C9 /* ShowNoteDetailsViewController.swift in Sources */,
 				CBC4B5382A62F04800A14E8E /* AddNodeViewController.swift in Sources */,
+				CBC9890D2A648487003904C9 /* NoteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
