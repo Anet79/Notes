@@ -213,8 +213,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Rb-ZS-9ys">
-                                <rect key="frame" x="30" y="145" width="80" height="43.333333333333343"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <rect key="frame" x="30" y="145" width="61" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwY-b5-2Td">
@@ -233,8 +233,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="Notes" imagePadding="7"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="body" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f9U-Eo-OOM">
-                                <rect key="frame" x="30" y="218.33333333333331" width="393" height="599.66666666666674"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" text="body" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f9U-Eo-OOM">
+                                <rect key="frame" x="30" y="209" width="393" height="609"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -373,6 +373,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZZ-2D-7zo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-135.1145038167939" y="-675.35211267605632"/>
+        </scene>
+        <!--Add Note Screen View Controller-->
+        <scene sceneID="bdW-qt-9zn">
+            <objects>
+                <viewController storyboardIdentifier="AddNoteScreenViewController" id="qah-Gd-zjH" customClass="AddNoteScreenViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kig-Ft-jV7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38a-9d-OoK">
+                                <rect key="frame" x="0.0" y="139" width="393" height="679"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9C-cj-YZj">
+                                <rect key="frame" x="320" y="67" width="65" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="dBP-CC-vnd"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Voi-kl-3Gn">
+                                <rect key="frame" x="20.000000000000004" y="99" width="44.333333333333343" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="DuB-NN-IQ5"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Title">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggT-Kv-Sdr">
+                                <rect key="frame" x="5" y="67" width="90.666666666666671" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="bLA-6T-mHa"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="taL-fz-gsP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O9C-cj-YZj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Voi-kl-3Gn" secondAttribute="trailing" constant="8" symbolic="YES" id="87b-gX-BLD"/>
+                            <constraint firstItem="taL-fz-gsP" firstAttribute="trailing" secondItem="O9C-cj-YZj" secondAttribute="trailing" constant="8" id="BCU-ML-Bnc"/>
+                            <constraint firstItem="38a-9d-OoK" firstAttribute="top" secondItem="Voi-kl-3Gn" secondAttribute="bottom" constant="5" id="EzY-pf-AHh"/>
+                            <constraint firstItem="ggT-Kv-Sdr" firstAttribute="top" secondItem="taL-fz-gsP" secondAttribute="top" constant="8" id="IKL-01-Hz7"/>
+                            <constraint firstItem="38a-9d-OoK" firstAttribute="leading" secondItem="taL-fz-gsP" secondAttribute="leading" id="cXA-uf-Wf7"/>
+                            <constraint firstItem="ggT-Kv-Sdr" firstAttribute="leading" secondItem="taL-fz-gsP" secondAttribute="leading" constant="5" id="hR2-0R-R79"/>
+                            <constraint firstItem="O9C-cj-YZj" firstAttribute="leading" secondItem="ggT-Kv-Sdr" secondAttribute="trailing" constant="224.33000000000001" id="jM5-75-gay"/>
+                            <constraint firstItem="Voi-kl-3Gn" firstAttribute="top" secondItem="taL-fz-gsP" secondAttribute="top" constant="40" id="lAn-04-yrT"/>
+                            <constraint firstItem="taL-fz-gsP" firstAttribute="bottom" secondItem="38a-9d-OoK" secondAttribute="bottom" id="sW9-Kl-8hO"/>
+                            <constraint firstItem="O9C-cj-YZj" firstAttribute="top" secondItem="taL-fz-gsP" secondAttribute="top" constant="8" id="wCN-oh-jEP"/>
+                            <constraint firstItem="taL-fz-gsP" firstAttribute="trailing" secondItem="38a-9d-OoK" secondAttribute="trailing" id="wco-Je-WPU"/>
+                            <constraint firstItem="Voi-kl-3Gn" firstAttribute="leading" secondItem="taL-fz-gsP" secondAttribute="leading" constant="20" id="x8G-y3-7uK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TitleText" destination="Voi-kl-3Gn" id="QtW-ZC-lBM"/>
+                        <outlet property="bodyText" destination="38a-9d-OoK" id="GuG-QU-oAR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xew-xM-Z42" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1116.793893129771" y="-1347.1830985915494"/>
         </scene>
         <!--Show Note Details View Controller-->
         <scene sceneID="L4g-Tz-IYt">

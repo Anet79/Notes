@@ -53,7 +53,7 @@ class HomeScreenViewController: UIViewController {
     
     @IBAction func addButtonTapped(_ sender: Any) {
         
-        let addNoteScreen = storyboard?.instantiateViewController(identifier: "AddNoteViewController") as! AddNodeViewController
+        let addNoteScreen = storyboard?.instantiateViewController(identifier: "AddNoteScreenViewController") as! AddNoteScreenViewController
                             
         addNoteScreen.modalPresentationStyle = .fullScreen
 
