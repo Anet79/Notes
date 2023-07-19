@@ -40,11 +40,16 @@ class HomeScreenViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowNoteDetailsViewController" {
-            let destination = segue.destination as! ShowNoteDetailsViewController
+            let upcoming = segue.destination as! ShowNoteDetailsViewController
             
             
-            let selectedIndexPath = tableView.indexPathForSelectedRow!
-            destination.note = notes.noteArray[selectedIndexPath.row]
+            let selectedIndexPath = self.tableView.indexPathForSelectedRow!
+            upcoming.note = notes.noteArray[selectedIndexPath.row]
+            
+            self.tableView.deselectRow(at: selectedIndexPath, animated: true)
+            
+            
+            
         }
     }
     
@@ -53,7 +58,7 @@ class HomeScreenViewController: UIViewController {
     
     @IBAction func addButtonTapped(_ sender: Any) {
         
-        let addNoteScreen = storyboard?.instantiateViewController(identifier: "AddNoteScreenViewController") as! AddNoteScreenViewController
+        let addNoteScreen = storyboard?.instantiateViewController(identifier: "AddNodeViewController") as! AddNodeViewController
                             
         addNoteScreen.modalPresentationStyle = .fullScreen
 
@@ -93,8 +98,16 @@ extension HomeScreenViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 60
+//    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "ShowNoteDetailsViewController", sender: self)
     }
 }
     

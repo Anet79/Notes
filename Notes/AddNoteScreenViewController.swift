@@ -22,6 +22,11 @@ class AddNoteScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        self.TitleText.text = "Enter Your Title"
+        self.bodyText.text = "Note Body"
+        
+        
         if note == nil {
             note = Note()
         }

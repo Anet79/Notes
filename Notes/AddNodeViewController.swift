@@ -50,7 +50,7 @@ class AddNodeViewController: UIViewController {
         note.saveData { (success) in
             if success {
                 
-                let HomeScreen = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+                let HomeScreen = self.storyboard?.instantiateViewController(identifier: "HomeScreenViewController") as! HomeScreenViewController
                                     
                 HomeScreen.modalPresentationStyle = .fullScreen
 

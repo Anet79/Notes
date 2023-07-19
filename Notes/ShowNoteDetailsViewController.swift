@@ -12,9 +12,19 @@ class ShowNoteDetailsViewController: UIViewController {
     
     @IBOutlet weak var bodyText: UITextView!
     
+    var Title: String?
+    
+    var body: String?
+    
+    
+    
+    
+    
     var note: Note!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
 
         titleText.text = note.title
         bodyText.text = note.des

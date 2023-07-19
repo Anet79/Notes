@@ -207,13 +207,13 @@
         <!--Add Node View Controller-->
         <scene sceneID="Jhd-Wu-prZ">
             <objects>
-                <viewController storyboardIdentifier="AddNoteViewController" id="JsU-PM-9Ds" customClass="AddNodeViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddNodeViewController" id="JsU-PM-9Ds" customClass="AddNodeViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ucv-7C-tys">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Rb-ZS-9ys">
-                                <rect key="frame" x="30" y="145" width="61" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" placeholder="Enter Your Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Rb-ZS-9ys">
+                                <rect key="frame" x="29.999999999999993" y="145" width="116.33333333333331" height="22"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -233,8 +233,12 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="Notes" imagePadding="7"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" text="body" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f9U-Eo-OOM">
-                                <rect key="frame" x="30" y="209" width="393" height="609"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" text="body" placeholder="Enter Your Body" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f9U-Eo-OOM">
+                                <rect key="frame" x="30" y="197" width="393" height="621"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="4ce-Nq-LPN"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="621" id="gxa-QB-8ID"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -251,6 +255,7 @@
                             <constraint firstItem="IwY-b5-2Td" firstAttribute="leading" secondItem="Sb6-qM-DqN" secondAttribute="trailing" constant="196" id="Vsz-ld-6rH"/>
                             <constraint firstItem="f9U-Eo-OOM" firstAttribute="top" secondItem="4Rb-ZS-9ys" secondAttribute="bottom" constant="30" id="WIK-Jl-e75"/>
                             <constraint firstItem="eA9-Ce-tUu" firstAttribute="trailing" secondItem="IwY-b5-2Td" secondAttribute="trailing" constant="30" id="dqn-W3-DUc"/>
+                            <constraint firstItem="eA9-Ce-tUu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4Rb-ZS-9ys" secondAttribute="trailing" symbolic="YES" id="fzm-sW-Pfb"/>
                             <constraint firstItem="Sb6-qM-DqN" firstAttribute="height" secondItem="IwY-b5-2Td" secondAttribute="height" id="gv0-Vy-bIF"/>
                             <constraint firstItem="Sb6-qM-DqN" firstAttribute="leading" secondItem="eA9-Ce-tUu" secondAttribute="leading" constant="10" id="nSm-fa-slR"/>
                             <constraint firstItem="4Rb-ZS-9ys" firstAttribute="top" secondItem="Sb6-qM-DqN" secondAttribute="bottom" constant="16" id="qLX-9M-4xe"/>
@@ -396,19 +401,13 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Done"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Voi-kl-3Gn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Voi-kl-3Gn">
                                 <rect key="frame" x="20.000000000000004" y="99" width="44.333333333333343" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="DuB-NN-IQ5"/>
                                 </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Title">
-                                        <attributes>
-                                            <font key="NSFont" metaFont="system" size="24"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggT-Kv-Sdr">
@@ -449,13 +448,13 @@
         <!--Show Note Details View Controller-->
         <scene sceneID="L4g-Tz-IYt">
             <objects>
-                <viewController storyboardIdentifier="ShowNoteDetailsViewController" id="bnl-h4-Qvj" customClass="ShowNoteDetailsViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowNoteDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bnl-h4-Qvj" customClass="ShowNoteDetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mHT-i1-ipo">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9by-Tq-vh2">
-                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="6PL-BP-H8h"/>
                                 </constraints>
@@ -464,7 +463,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DLl-cp-yP2">
-                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="792"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -490,7 +489,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZE-qO-mKl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-317" y="-1347"/>
+            <point key="canvasLocation" x="-327" y="-1338"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="BOw-xZ-Q3Y">
@@ -552,6 +551,7 @@
                                             <outlet property="bodyText" destination="XO7-nu-Vdb" id="f7T-rb-mry"/>
                                             <outlet property="dateText" destination="AEy-ew-maL" id="dV7-l8-gjJ"/>
                                             <outlet property="titleText" destination="WQo-xz-NU6" id="Cap-cV-Nwf"/>
+                                            <segue destination="bnl-h4-Qvj" kind="showDetail" identifier="ShowNoteDetailsViewController" id="xRb-a9-5ZZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
