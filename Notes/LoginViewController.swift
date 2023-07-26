@@ -19,6 +19,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "pngtree-beautiful-yellow-note-image_1420104")! )
+
             setUpElements()
         // Do any additional setup after loading the view.
     }

@@ -40,13 +40,18 @@ class HomeScreenViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowNoteDetailsViewController" {
-            let upcoming = segue.destination as! ShowNoteDetailsViewController
-            
-            
-            let selectedIndexPath = self.tableView.indexPathForSelectedRow!
-            upcoming.note = notes.noteArray[selectedIndexPath.row]
-            
-            self.tableView.deselectRow(at: selectedIndexPath, animated: true)
+          
+                let upcoming = segue.destination as! ShowNoteDetailsViewController
+                
+                
+                let selectedIndexPath = self.tableView.indexPathForSelectedRow!
+                upcoming.note = notes.noteArray[selectedIndexPath.row]
+            upcoming.Title = notes.noteArray[selectedIndexPath.row].title
+            upcoming.body = notes.noteArray[selectedIndexPath.row].des
+                
+               // self.tableView.deselectRow(at: selectedIndexPath, animated: true)
+            upcoming.modalPresentationStyle = .fullScreen
+           present( upcoming, animated: true , completion: nil)
             
             
             
@@ -107,7 +112,7 @@ extension HomeScreenViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "ShowNoteDetailsViewController", sender: self)
+        self.performSegue(withIdentifier: "ShowNoteDetailsViewController", sender: indexPath)
     }
 }
     

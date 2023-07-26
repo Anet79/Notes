@@ -27,6 +27,8 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      //  self.view.layer.backgroundColor=UIColor(patternImage: UIImage(named: "pngtree-beautiful-yellow-note-image_1420104")! )
+       
         
         setUpElements()
         

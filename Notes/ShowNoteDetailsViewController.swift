@@ -26,11 +26,20 @@ class ShowNoteDetailsViewController: UIViewController {
         
        
 
-        titleText.text = note.title
-        bodyText.text = note.des
+        titleText.text = Title
+        bodyText.text = body
     }
     
 
-  
+    @IBAction func DoneTapped(_ sender: Any) {
+        
+        let HomeScreen = self.storyboard?.instantiateViewController(identifier: "HomeScreenViewController") as! HomeScreenViewController
+                            
+        HomeScreen.modalPresentationStyle = .fullScreen
+
+
+        self.present( HomeScreen, animated: true , completion: nil)
+    }
+    
 
 }
